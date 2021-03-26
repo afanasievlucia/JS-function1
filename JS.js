@@ -6,17 +6,17 @@ function kelvinToFahrenheit(Kelvin) {
 console.log(kelvinToFahrenheit(298));
 
 
-function humanAgeInDogYears(myAge) {
-    let earlyYears = 2;
-    earlyYears *= 10.5;
-    let laterYears = myAge - 2;
-    laterYears *= 4;
-    return humanAgeInDogYears = myAge + laterYears;
+function humanAgeInDogYears(myAge, myName) {
+    let earlyYears = 2 * 10.5;
+    let laterYears = (myAge - 2) * 4;
+    const humanAgeInDogYears = earlyYears + laterYears;
+    console.log(`My name is ${myName} and i'm ${myAge} years old witch is ${humanAgeInDogYears} age in dog years`);
 }
-console.log(humanAgeInDogYears(34));
+humanAgeInDogYears(25, "maria");
+humanAgeInDogYears(65, "Sofia");
+
 
 function answerMyQuestion(userName, userQuestion) {
-    
     let randomNumber = Math.floor (Math.random () * 8);
     let eigthBall = "";
     if (randomNumber == 0 ) {
@@ -58,4 +58,4 @@ function raceTime(userAge, registereEarly) {
         console.log(`Youth registrants run at 12:30, with race number: ${raceNumber}`);
     }
 }
-console.log(raceTime( 18, true)); // nu siu de ce imi da undefined in consola.
+raceTime( 19, true);
